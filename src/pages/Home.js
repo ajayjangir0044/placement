@@ -15,6 +15,7 @@ const Home=()=>{
         setNumber(e.target.value)
     }
 
+    //creating req here so that load fasters
     useEffect(()=>{
          axios.get("https://raw.githubusercontent.com/invictustech/test/main/README.md").then(res=>setData(res.data))
     },[])
