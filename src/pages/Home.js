@@ -37,6 +37,7 @@ const Home=()=>{
          
     }
     const findResult = (str = '', num = number) => {
+  
         const strArr = str.split(/\W+/); //split the every word of array into string
         const map = {};
         strArr.forEach(word => {
@@ -49,9 +50,7 @@ const Home=()=>{
         const resultedArr = Object.keys(map).map(key => [key, map[key]]); //change map data to array
         resultedArr.sort((a, b) => b[1] - a[1]); //sort array on basis of number of occurences
         return resultedArr.slice(0, num).map(el => el);//return the result acc to number user passing
-        
-        
-
+  
      };
      const handleSearch=e=>setSearchValue(e.target.value)
 
